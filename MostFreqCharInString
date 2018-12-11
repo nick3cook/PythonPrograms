@@ -1,0 +1,37 @@
+#Nicholas Cook
+#Objective: Print most frequent character in any string given by user
+def main():
+    char = ""
+    count = 0
+    list1 = []
+    input_string = input('Enter a string: ')
+    
+    for char1 in input_string:
+        temp = char1
+        counter =  0
+        for char2 in input_string:
+            if (temp == char2):
+              counter += 1
+    
+        if (counter > count):
+            count = counter
+            character = temp
+
+        list1.append(character)
+    
+    for pos in range (len(input_string)):
+        for char1 in input_string:
+            temp = char1
+            counter = 0
+            
+            for char2 in input_string:
+                if (temp == char2):
+                    counter += 1
+        
+            if (counter == count):
+                if (temp not in list1):
+                    list1.append(temp)
+
+    
+    print("The most frequent character is " + list1[pos])
+main()
